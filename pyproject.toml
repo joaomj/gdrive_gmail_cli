@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "google-personal-cli"
+version = "0.1.0"
+description = "Read-only Gmail and Google Drive CLI for personal automation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = [
+    "google-auth>=2.40.3",
+    "google-auth-oauthlib>=1.2.2",
+    "httpx>=0.28.1",
+    "keyring>=25.6.0",
+    "requests>=2.32.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.11",
+]
+
+[project.scripts]
+gpersonal = "google_personal_cli.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/google_personal_cli"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "S"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101", "S105", "S106"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.uv]
+exclude-newer = "1 week"

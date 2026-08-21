@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+
+# Local environments and tool caches
+.venv/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# Google OAuth and personal content
+client_secret*.json
+client-id*.json
+credentials*.json
+token*.json
+downloads/
+*.pdf
+*.eml
