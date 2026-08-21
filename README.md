@@ -133,7 +133,8 @@ uv run ruff check .
 ```
 
 Read [`docs/tech-context.md`](docs/tech-context.md) for the engineering source
-of truth. Read [`.agents/skills/google-personal-cli/SKILL.md`](.agents/skills/google-personal-cli/SKILL.md)
+of truth. Read [`CHANGELOG.md`](CHANGELOG.md) for release history. Read
+[`.agents/skills/google-personal-cli/SKILL.md`](.agents/skills/google-personal-cli/SKILL.md)
 for AI agent usage rules.
 
 [Google Cloud Console]: https://console.cloud.google.com/
